@@ -1,0 +1,31 @@
+[global]
+
+notification_limit = 1
+
+origin = bottom-right
+
+offset = 50x50
+
+padding = 15
+
+horizontal_padding = 15
+
+frame_width = 0
+
+font = "Cantarell 12"
+
+line_height = 4
+
+corner_radius = 8
+
+idle_threshold = "4s"
+
+progress_bar = false
+
+[rules]
+
+background = "#1a1b26BF"
+
+foreground = "#a9b1d6"
+
+timeout = "5s"

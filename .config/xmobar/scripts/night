@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo "<fn=2>\xf186</fn>"

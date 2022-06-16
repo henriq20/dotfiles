@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# ------------------------------------------------------------------------------
+# Checks for updates assyncronously in order to not block the user interface
+# ------------------------------------------------------------------------------
+
+# check_updates() {
+#     return $(checkupdates | wc -l)
+# }
+
+# check_updates &
+
+# wait $!
+
+# echo $?
+
+# tmp=$(mktemp -td)
+# mkfifo "$tmp/f"
+# trap 'rm -rf "$tmp"' EXIT
+
+# get_disk_usage() {
+#     # echo $(df -h | grep "\/$" | awk '{ print $4 }') > "$tmp/get_disk_usage";
+#     echo $(checkupdates | wc -l) > "$tmp/f";
+# }
+
+# get_disk_usage &
+
+# # wait $!
+
+# disk_usage=$(< "$tmp/f")
+
+# echo $disk_usage
+
+# Old way
+
+updates=$(checkupdates | wc -l)
+
+echo $updates
