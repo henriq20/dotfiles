@@ -1,0 +1,5 @@
+MOD = 'mod4'
+TERMINAL = 'alacritty'
+CODE_EDITOR = 'code'
+FILE_MANAGER = 'pcmanfm'
+BROWSER = 'google-chrome-stable'
