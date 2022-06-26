@@ -32,10 +32,10 @@ fi
 
 xsetroot -cursor_name left_ptr
 
-if [ -e $HOME/.cache/xmonad/xmonad-x86_64-linux ]; then
-  exec $HOME/.cache/xmonad/xmonad-x86_64-linux
-else
-  exec xmonad
-fi
-
+numlockx on &
+nitrogen --restore &
+redshift &
+dunst &
+picom --experimental-backends &
+exec qtile start
 
