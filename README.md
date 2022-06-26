@@ -2,6 +2,13 @@
 
 I'm currently using **Qtile** as my Window Manager.
 
+## Qtile requirements
+
+If you want to use my Qtile config, you may want to install these fonts:
+
+- JetBrains Mono;
+- Font Awesome 6 Pro Solid/Regular.
+
 ## Post Installation
 
 Here are some things I like to do on every arch install.
