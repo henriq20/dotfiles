@@ -36,27 +36,30 @@ primary_screen = Screen(
                           prompt=''),
 
             widget.Spacer(),
-
+    
             # Shows an icon of an arrow pointed upwards, indicating whether it is time to update or not
             CustomIcon(text=UPDATES_ICON,
                        predicate=has_more_than_a_hundred_of_updates,
                        colors=['#D7E7F5', '#777D96'],
                        font='Font Awesome 6 Pro Solid',
-                       update_interval=0
+                       update_interval=0,
+                       requirement='checkupdates'
             ),
 
             # Shows an icon of a moon, indicating whether redshift is on or not
             CustomIcon(text=MOON_ICON,
                        predicate=is_redshift_on,
                        colors=['#D7E7F5', '#777D96'],
-                       font='Font Awesome 6 Pro Solid'
+                       font='Font Awesome 6 Pro Solid',
+                       requirement='redshift'
             ),
 
             # Shows an icon of a headphone, indicating whether it is connected or not
             CustomIcon(text=HEADPHONES_ICON,
                        predicate=is_headphones_connected,
                        colors=['#D7E7F5', '#777D96'],
-                       font='Font Awesome 6 Pro Solid'
+                       font='Font Awesome 6 Pro Solid',
+                       requirement='bluetoothctl'
             ),
 
             # Shows the current keyboard layout
