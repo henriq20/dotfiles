@@ -1,6 +1,6 @@
 # My Dotfiles
 
-I'm currently using **Qtile** as my Window Manager.
+I'm currently using **AwesomeWM** as my Window Manager.
 
 ## Qtile requirements
 
