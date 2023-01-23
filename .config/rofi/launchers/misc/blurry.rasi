@@ -8,23 +8,21 @@
  */
 
 configuration {
-	font:							"Noto Sans Bold 10";
-    show-icons:                     true;
-	icon-theme: 					"Papirus";
-    display-drun: 					"";
-    drun-display-format:            "{name}";
-    disable-history:                false;
-	sidebar-mode: 					false;
+	font:				 "Noto Sans Bold 9";
+    show-icons:          true;
+	icon-theme: 		 "Papirus";
+    display-drun: 	     "";
+    drun-display-format: "{name}";
+    disable-history:     false;
+	sidebar-mode: 	     false;
 }
 
 * {
-    background: #2c2c2e80;
-    background-alt: #2c2c2e80;
-    // background:                     #00000000;
-    // background-alt:              	#00000000;
-    // background-bar:                 #f2f2f215;
-    // foreground:                     #f2f2f2EE;
-    // accent:			            	#3DAEE966;
+    background:     #2c2c2e80;
+    background-alt: #2c2c2e00;
+    background-bar: #f2f2f215;
+    foreground:     #f2f2f2EE;
+    accent:			#3DAEE966;
 }
 
 window {
@@ -33,7 +31,7 @@ window {
     text-color:                     @foreground;
 	border:							0px;
 	border-color:					@border;
-    border-radius:                  0px;
+    border-radius:                  12px;
 	width:							40%;
     location:                       center;
     x-offset:                       0;
@@ -42,10 +40,10 @@ window {
 
 prompt {
     enabled: 						true;
-	padding: 						0.30% 1% 0% -0.5%;
+	padding: 						0.30% 0.8% 0% -0.3%;
 	background-color: 				@background-alt;
 	text-color: 					@foreground;
-	font:							"FantasqueSansMono Nerd Font 12";
+	font:							"Font Awesome 6 Pro 15";
 }
 
 entry {
@@ -55,7 +53,8 @@ entry {
     expand:                         true;
     horizontal-align:               0;
     placeholder:                    "Search";
-    padding:                        0.10% 0% 0% 0%;
+    placeholder-color:              #f2f2f280;
+    padding:                        0.40% 0% 0% 0%;
     blink:                          true;
 }
 
@@ -68,7 +67,8 @@ inputbar {
     border-radius:                  12px;
 	border-color:					@accent;
     margin:                         0% 0% 0% 0%;
-    padding:                        1.5%;
+    // padding:                        1.5%;
+    padding:                        1.0%;
 }
 
 listview {
@@ -100,7 +100,7 @@ element {
 }
 
 element-icon {
-    background-color: 				@background;
+    background-color: 				@background-alt;
     text-color:       				inherit;
     horizontal-align:               0.5;
     vertical-align:                 0.5;
@@ -109,7 +109,7 @@ element-icon {
 }
 
 element-text {
-    background-color: 				@background;
+    background-color: 				@background-alt;
     text-color:       				inherit;
     expand:                         true;
     horizontal-align:               0.5;

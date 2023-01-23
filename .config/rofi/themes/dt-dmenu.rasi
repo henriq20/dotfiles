@@ -1,73 +1,42 @@
 * {
-    background-color:           #1a1b26;
-    text-color:                 #a9b1d6;
-    height:                     30px;
-    font:                       "JetBrainsMono NF 9";
-    prompt-font:                "JetBrainsMono NF 9";
-    prompt-background:          #bfcaf3;
-    prompt-foreground:          #282c34;
-    prompt-padding:             4px 10px;
+    background-color: #1a1b2600;
+    text-color:       #a9b1d6;
+    font:             "JetBrains Mono Bold 9";
+    // font:             "Inter Semi Bold 8.5";
 }
 
 #window {
-    anchor: north west;
+    background-color: @background-color;
+    x-offset: 35px;
     location: north west;
-    x-offset: 40px;
-    width: 750px;
-    padding: 0px;
     children: [ horibox ];
 }
 
 #horibox {
     orientation: horizontal;
-    children: [ prompt, entry, listview ];
+    children: [ entry, listview ];
 }
 
-#prompt {
+#entry {
     enabled: false;
-    padding:          @prompt-padding;
-    background-color: @prompt-background;
-    text-color:       @prompt-foreground;
-    font:             @prompt-font;
 }
 
 #listview {
     layout: horizontal;
-    lines: 100;
-}
-
-#entry {
-    padding: 5px 8px;
-    expand: false;
-    width: 10em;
+    expand: true;
+    lines: 10;
 }
 
 #element {
-    padding: 5px 10px;
+    padding: 8px 12px;
 }
 
 #element selected {
-    background-color: #ff9e64;
-    text-color: #1a1b26;
+    text-color: #d7e7f5;
 }
 
 element-text {
-    background-color: inherit;
+    highlight: none;
     text-color:       inherit;
-}
-
-element-icon {
-    background-color: red;
-}
-
-// element-icon {
-//     background-color: inherit;
-// }
-
-/* Not actually relevant for this configuration, but it might
-be useful to someone having issues with their icons' background color
-
-element-icon {
     background-color: inherit;
 }
-*/

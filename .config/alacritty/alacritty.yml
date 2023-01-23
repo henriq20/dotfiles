@@ -20,7 +20,7 @@ window:
   #dimensions:
   #  columns: 0
   #  lines: 0
-  opacity: 0.8
+  opacity: 0.75
   # Window position (changes require restart)
   #
   # Specified in number of pixels.
@@ -97,7 +97,7 @@ scrolling:
 # Some applications, like Emacs, rely on knowing about the width of a tab.
 # To prevent unexpected behavior in these applications, it's also required to
 # change the `it` value in terminfo when altering this setting.
-#tabspaces: 8
+tabspaces: 4
 
 # Font configuration
 font:
@@ -190,7 +190,7 @@ schemes:
     # Default colors
     primary:
        background: '0x1a1b26'
-       foreground: '0xa9b1d6' 
+       foreground: '0xa9b1d6'
     # Normal colors
     normal:
       black:   '0x15161E'
@@ -201,7 +201,7 @@ schemes:
       magenta: '0xbb9af7'
       cyan:    '0x7dcfff'
       white:   '0xa9b1d6'
-    
+
       # Bright colors
     bright:
       black:   '0x414868'
@@ -212,18 +212,18 @@ schemes:
       magenta: '0xbb9af7'
       cyan:    '0x7dcfff'
       white:   '0xc0caf5'
-    
+
     indexed_colors:
       - { index: 16, color: '0xff9e64' }
       - { index: 17, color: '0xdb4b4b' }
-  SimpleDark: &SimpleDark    
+  SimpleDark: &SimpleDark
     primary:
       background: '#191919'
       foreground: '#d8dee9'
     cursor:
       text: '#191919'
       cursor: '#d8dee9'
-  
+
     vi_mode_cursor:
       text: CellBackground
       cursor: CellForeground
@@ -231,7 +231,7 @@ schemes:
     selection:
       text: '#191919'
       background: '#d8dee9'
-  
+
     # Normal colors
     normal:
       black:   '#191919'
@@ -242,7 +242,7 @@ schemes:
       magenta: '#b30ad0'
       cyan:    '#32d0fc'
       white:   '#acadb1'
-  
+
     # Bright colors
     bright:
       black:   '#36393d'
@@ -253,7 +253,7 @@ schemes:
       magenta: '#cc15ed'
       cyan:    '#54d9ff'
       white:   '#dbdbdb'
-  
+
     # Dim colors
     dim:
       black:   '#676f78'
@@ -561,7 +561,7 @@ schemes:
 # *Catpuccin
 # *TokyoNight
 
-colors: *TokyoNight
+      #colors: *TokyoNight
 #######################################
 ##       END OF COLOR SCHEMES        ##
 #######################################
@@ -626,10 +626,13 @@ cursor:
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-#shell:
-#  program: /bin/bash
+shell:
+  program: /bin/fish
 #  args:
 #    - --login
+
+import:
+  - ~/.config/alacritty/themes/themes/monokai_pro.yaml
 
 # Startup directory
 #
@@ -727,8 +730,9 @@ cursor:
 # And optionally:
 #
 # - `mods` (see key bindings)
-#mouse_bindings:
-#  - { mouse: Middle, action: PasteSelection }
+mouse_bindings:
+  - { mouse: Left, action: Copy }
+  - { mouse: Right, action: Paste }
 
 # Key bindings
 #

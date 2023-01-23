@@ -49,7 +49,7 @@ open_img () {
     trap 'rm -f $tmp' EXIT
     count="$(listfiles "$1" | grep -nF "$1")"
     if [ -n "$count" ]; then
-        sxiv -i -n "${count%%:*}" -- < "$tmp"
+        sxiv -a -i -n "${count%%:*}" -- < "$tmp"
     else
         sxiv -- "$@" # fallback
     fi

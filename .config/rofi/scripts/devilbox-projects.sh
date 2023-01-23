@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-if [ "$#" -eq 1 ]; then
-    code $HOME/devilbox/data/www/$1
-else
-    ls $HOME/devilbox/data/www/
-fi
+# qtile cmd-obj -o widget groupbox -f eval -a "self.toggle_hide()" &>/dev/null & await
 
+if [ "$#" -eq 1 ]; then 
+    code ~/devilbox/data/www/$1
+else
+    ls ~/devilbox/data/www/
+fi
